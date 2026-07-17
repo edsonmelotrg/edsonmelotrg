@@ -528,14 +528,15 @@
       display: grid;
       grid-template-columns: 1.1fr 1fr;
       gap: 60px;
-      align-items: start;
+      align-items: stretch;
     }
-    .trg__content { }
+    .trg__content { display: flex; flex-direction: column; }
     .trg__pillars {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
       margin-top: 44px;
+      margin-top: auto;
     }
     .trg__pillar {
       background: rgba(255,255,255,0.05);
@@ -564,12 +565,16 @@
     }
     .trg__visual {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
     .trg__compare {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 20px;
       overflow: hidden;
+      margin-top: auto;
     }
     .trg__compare-header {
       display: grid;
@@ -1491,11 +1496,11 @@
           </div>
         </div>
 
-        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:28px 32px;margin-top:32px;">
-              <h3 style="font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--color-gold);margin-bottom:16px;">O que é Reprocessamento?</h3>
-              <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.75;">O reprocessamento substitui as emoções geradas diante de situações vividas em épocas nas quais não havia compreensão exata dos fatos, nem condição de defesa ou questionamento. Insere-se, então, ao reprocessar o passado, a geração de novas e edificantes emoções. Um dos principais resultados externos é a melhora de todos os relacionamentos. Internamente, haverá harmonia e novos propósitos de vida.</p>
-            </div>
-            <div class="trg__visual reveal reveal-delay-2">
+        <div class="trg__visual reveal reveal-delay-2">
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:28px 32px;margin-bottom:16px;">
+            <h3 style="font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--color-gold);margin-bottom:16px;">O que é Reprocessamento?</h3>
+            <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.75;">O reprocessamento substitui as emoções geradas diante de situações vividas em épocas nas quais não havia compreensão exata dos fatos, nem condição de defesa ou questionamento. Insere-se, então, ao reprocessar o passado, a geração de novas e edificantes emoções. Um dos principais resultados externos é a melhora de todos os relacionamentos. Internamente, haverá harmonia e novos propósitos de vida.</p>
+          </div>
           <div class="trg__compare">
             <div class="trg__compare-header">
               <div class="trg__compare-col">
