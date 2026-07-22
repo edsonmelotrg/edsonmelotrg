@@ -2037,14 +2037,25 @@
     </a>
   </div>
 
-  <audio id="site-audio" autoplay loop muted playsinline preload="auto" style="display:none">
+<audio id="site-audio" autoplay loop playsinline preload="auto" style="display:none">
     <source src="Abrigo de Luz.mp3" type="audio/mpeg">
-  </audio>
+</audio>
 
   <!-- ============================================
        JAVASCRIPT
        ============================================ -->
   <script>
+    const audio = document.getElementById('site-audio');
+    const tryPlayAudio = () => {
+      if (!audio) return;
+      audio.volume = 0.6;
+      audio.play().catch(() => {});
+    };
+
+    window.addEventListener('load', tryPlayAudio, { once: true });
+    window.addEventListener('click', tryPlayAudio, { once: true });
+    window.addEventListener('touchstart', tryPlayAudio, { once: true });
+
     // ---- NAV SCROLL ----
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
