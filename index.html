@@ -1433,7 +1433,7 @@
 
     <div class="hero__media">
       <div class="hero__image-card">
-        <video class="hero__video" autoplay muted loop playsinline poster="EDSON9.png" aria-label="Vídeo de apresentação de Edson Melo">
+        <video class="hero__video" autoplay loop playsinline poster="EDSON9.png" aria-label="Vídeo de apresentação de Edson Melo">
           <source src="vídeo/meu%20vídeo.mp4" type="video/mp4" />
           Seu navegador não suporta vídeo HTML5.
         </video>
@@ -2017,7 +2017,7 @@
         <span>Rio Claro, SP • Atendimento online para todo o Brasil</span>
       </div>
     </div>
-  </footer>
+  </footer> 
 
   <!-- ============================================
        BOTÃO FLUTUANTE WHATSAPP
@@ -2032,25 +2032,10 @@
     </a>
   </div>
 
-<audio id="site-audio" autoplay loop playsinline preload="auto" style="display:none">
-    <source src="Abrigo de Luz.mp3" type="audio/mpeg">
-</audio>
-
   <!-- ============================================
        JAVASCRIPT
        ============================================ -->
   <script>
-    const audio = document.getElementById('site-audio');
-    const tryPlayAudio = () => {
-      if (!audio) return;
-      audio.volume = 0.6;
-      audio.play().catch(() => {});
-    };
-
-    window.addEventListener('load', tryPlayAudio, { once: true });
-    window.addEventListener('click', tryPlayAudio, { once: true });
-    window.addEventListener('touchstart', tryPlayAudio, { once: true });
-
     // ---- NAV SCROLL ----
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
